@@ -1,0 +1,17 @@
+services:
+  app:
+    container_name: WebApp
+    build:
+      context: ./app
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+
+  test:
+    container_name: Tests
+    build:
+      context: ./tests
+      dockerfile: Dockerfile
+    network_mode: service:app
+    depends_on:
+      - app
