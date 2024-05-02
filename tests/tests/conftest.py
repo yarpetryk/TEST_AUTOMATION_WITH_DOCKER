@@ -9,12 +9,10 @@ import allure
 
 @pytest.fixture(scope="session")
 def web_driver():
-    # options = Options()
-    # options.add_argument('--headless')
-    # options.add_argument('--no-sandbox')
-    # driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()), options=options)
-    driver = webdriver.Chrome()
-    driver.maximize_window()
+    options = Options()
+    options.add_argument('--headless')
+    options.add_argument('--no-sandbox')
+    driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()), options=options)
     driver.get('http://127.0.0.1:8000/')
 
     yield driver
