@@ -8,4 +8,21 @@ pipeline {
             }
         }
     }
+    post {
+        always {
+            mail to: 'yaroslav.petryk@lembrergsolutions.com', from: 'jenkins@example.com',
+                subject: "Pipeline is running",
+                body: "Pipeline is running"
+        }
+        success {
+            mail to: 'yaroslav.petryk@lembrergsolutions.com', from: 'jenkins@example.com',
+                subject: "Pipeline finished with success",
+                body: "SUCCESS!!!"
+        }
+        failure {
+            mail to: 'yaroslav.petryk@lembrergsolutions.com', from: 'jenkins@example.com',
+                subject: "Pipeline finished with failure",
+                body: "ERROR!!!"
+        }
+    }
 }
