@@ -13,6 +13,7 @@ pipeline {
             mail to: 'yaroslav.petryk@lembergsolutions.com',
                  subject: "Pipeline is running",
                  body: "Pipeline is running"
+            echo 'Pipeline is running'
         }
         success {
             mail to: 'yaroslav.petryk@lembergsolutions.com',
