@@ -3,8 +3,7 @@ pipeline {
     stages {
         stage('Run automated test') {
             steps {
-                sh 'docker stop $(docker ps -a -q)'
-                sh 'docker rm $(docker ps -a -q)'
+                echo 'Running pipeline'
                 sh 'docker compose -f docker-compose.yml up -d --build'
             }
         }
