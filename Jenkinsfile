@@ -1,6 +1,11 @@
 pipeline {
     agent any
     stages {
+        stage('Before running') {
+            steps {
+                echo 'Prepare for test running'
+            }
+        }
         stage('Run automated test') {
             steps {
                 echo 'Running pipeline...'
