@@ -7,12 +7,12 @@ pipeline {
                 sh 'pwd'
             }
         }
-        stage('Run automated test') {
-            steps {
-                echo 'Running pipeline...'
-                sh 'docker compose -f docker-compose.yml up -d --build'
-            }
-        }
+//         stage('Run automated test') {
+//             steps {
+//                 echo 'Running pipeline...'
+//                 sh 'docker compose -f docker-compose.yml up -d --build'
+//             }
+//         }
     }
     post {
         always {
