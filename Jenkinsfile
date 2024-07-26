@@ -1,10 +1,11 @@
 pipeline {
     agent any
     stages {
-    stage('Preparing to run') {
-            steps {
-                sh 'pw'
-            }
+        stage('Preparing to run') {
+                steps {
+                    sh 'pw'
+                }
+        }
         stage('Run automated test') {
             steps {
                 echo 'Running pipeline...'
