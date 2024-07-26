@@ -14,13 +14,13 @@ pipeline {
             }
         }
     }
-//     post {
-//         always {
+    post {
+        always {
 //             mail to: 'yaroslav.petryk@lembergsolutions.com',
 //                  subject: "Pipeline is running",
 //                  body: "Pipeline is running"
-//             echo 'Pipeline is running'
-//         }
+            echo 'Inside POST block'
+        }
 //         success {
 //             mail to: 'yaroslav.petryk@lembergsolutions.com',
 //                  subject: "Pipeline finished with success",
@@ -31,5 +31,5 @@ pipeline {
 //                  subject: "Pipeline finished with failure",
 //                  body: "ERROR!!!"
 //         }
-//     }
+    }
 }
