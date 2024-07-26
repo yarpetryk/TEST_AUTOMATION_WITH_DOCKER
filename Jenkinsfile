@@ -3,15 +3,15 @@ pipeline {
     stages {
         stage('Run automated test') {
             steps {
-                echo 'Running pipeline...'
+                echo 'Pipeline is running...'
 //                 sh 'docker compose -f docker-compose.yml up -d --build'
-                    sh 'docker compose up'
+//                     sh 'docker compose up'
             }
         }
     }
     post {
         always {
-            echo 'Pipeline run is triggered'
+            echo 'Pipeline is triggered successfully'
         }
         success {
             echo 'Pipeline runs with SUCCESS'
