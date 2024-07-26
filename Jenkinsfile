@@ -1,12 +1,6 @@
 pipeline {
     agent any
     stages {
-        stage('Before running') {
-            steps {
-                echo 'Prepare for test running'
-                sh 'pwd'
-            }
-        }
         stage('Run automated test') {
             steps {
                 echo 'Running pipeline...'
@@ -16,17 +10,16 @@ pipeline {
     }
     post {
         always {
-            mail to: 'yaroslav.petryk@lembergsolutions.com', subject: "Pipeline is running", body: "Pipeline is running"
+            echo 'Pipeline run is triggered'
         }
-//         success {
-//             mail to: 'yaroslav.petryk@lembergsolutions.com',
-//                  subject: "Pipeline finished with success",
-//                  body: "SUCCESS!!!"
-//         }
-//         failure {
+        success {
+            echo 'Pipeline runs with SUCCESS'
+        }
+        failure {
+            echo 'Pipeline runs with FAILURE'
 //             mail to: 'yaroslav.petryk@lembergsolutions.com',
 //                  subject: "Pipeline finished with failure",
 //                  body: "ERROR!!!"
-//         }
+        }
     }
 }
