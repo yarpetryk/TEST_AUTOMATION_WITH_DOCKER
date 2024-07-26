@@ -4,6 +4,7 @@ pipeline {
         stage('Before running') {
             steps {
                 echo 'Prepare for test running'
+                sh 'pwd'
             }
         }
         stage('Run automated test') {
