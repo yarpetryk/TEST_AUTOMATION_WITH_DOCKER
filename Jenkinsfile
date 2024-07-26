@@ -1,14 +1,10 @@
 pipeline {
     agent any
     stages {
-        stage('Preparing to run') {
-                steps {
-                    sh 'pw'
-                }
-        }
         stage('Run automated test') {
             steps {
                 echo 'Running pipeline...'
+                sh 'pw'
                 sh 'docker compose -f docker-compose.yml up -d --build'
             }
         }
