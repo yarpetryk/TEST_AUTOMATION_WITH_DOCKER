@@ -7,6 +7,7 @@ services:
       dockerfile: Dockerfile
     ports:
       - "8000:8000"
+    restart: always
 
   test:
     container_name: Tests
@@ -16,3 +17,4 @@ services:
     network_mode: service:app
     depends_on:
       - app
+    restart: always
