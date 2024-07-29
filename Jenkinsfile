@@ -5,7 +5,7 @@ pipeline {
             steps {
                 echo 'Pipeline is running...'
                 sh 'docker compose up --build'
-                sh 'trap exit INT'
+                sh 'docker compose down'
             }
         }
     }
