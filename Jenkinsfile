@@ -5,6 +5,7 @@ pipeline {
             steps {
                 echo 'Pipeline is running...'
                 sh 'docker compose up --abort-on-container-exit --build'
+                echo 'Docker containers STOPPED'
             }
         }
     }
