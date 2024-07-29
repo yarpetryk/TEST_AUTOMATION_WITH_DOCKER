@@ -5,8 +5,6 @@ pipeline {
             steps {
                 echo 'Pipeline is running...'
                 sh 'docker compose up --build'
-                sh 'docker compose down'
-                sh 'docker kill'
             }
         }
     }
