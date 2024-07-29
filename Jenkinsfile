@@ -4,7 +4,7 @@ pipeline {
         stage('Run automated test') {
             steps {
                 echo 'Pipeline is running...'
-                sh 'docker compose up'
+//                 sh 'docker compose up --build'
             }
         }
     }
