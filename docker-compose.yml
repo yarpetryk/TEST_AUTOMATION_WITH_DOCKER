@@ -9,7 +9,7 @@ services:
       - "8000:8000"
 
   test:
-    container_name: Tests
+    container_name: Test
     build:
       context: ./tests
       dockerfile: Dockerfile
