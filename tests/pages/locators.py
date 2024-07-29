@@ -15,6 +15,6 @@ class HomePageLocators(object):
     SEARCH_INPUT_FIELD = (By.XPATH, "//input[contains(@class,'form-control input-lg')]")
     SEARCH_BUTTON = (By.XPATH, "//button[contains(@class,'btn btn-info btn-lg')]")
     MOVIE_ITEM = (By.XPATH, "//*[contains(@href, '/146/')]")
-    RATE_SIGN = (By.XPATH, "//*[contains(@data-rating,'8')]")
+    RATE_SIGN = (By.XPATH, "//*[contains(@data-rating,'4')]")
     SUBMIT_BUTTON = (By.XPATH, "//*[contains(@type,'submit')]")
     RATE_ACCEPTED_TEXT = (By.XPATH, "//*[contains(@class,'success')]")
