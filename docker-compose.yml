@@ -7,7 +7,6 @@ services:
       dockerfile: Dockerfile
     ports:
       - "8000:8000"
-    command: /bin/bash
 
   test:
     container_name: Tests
@@ -17,4 +16,3 @@ services:
     network_mode: service:app
     depends_on:
       - app
-    command: /bin/bash
